@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilo_impresion.css" media="print">
+    <link rel="stylesheet" href="estilo_pantalla.css" media="screen">
+    <title>Ejemplo</title>
+</head>
+<body>
+    
+  <h1>Hojas de estilo específicas</h1>
+
+  <p>Esta página enlaza a dos hojas de estilo distintas: una para la visualización en pantalla y otra para la impresión.</p>
+
+  <p>Además, en pantalla, si el ancho es menor de 450px tendrá un fondo de color azul</p>
+  <p>Si el ancho está entre 450px y 550px el fondo será verde</p>
+  <p>Y si el ancho es mayor de 550px el fondo será amarillo</p>
+
+  <p>El ancho actual es <strong><span id="sizeH"></span>px</strong>.</p>
+
+  <p>El alto actual es <strong><span id="sizeV"></span>px</strong>.</p>
+
+  <script>
+    var ancho = window.innerWidth;
+    var texto = document.getElementById("sizeH");
+    texto.textContent = ancho;
+    var alto = window.innerHeight;
+    var texto2 = document.getElementById("sizeV");
+    texto2.textContent = alto;
+    window.onresize = function () {
+      var ancho = window.innerWidth;
+      var texto = document.getElementById("sizeH");
+      texto.textContent = ancho;
+      var alto = window.innerHeight;
+      var texto2 = document.getElementById("sizeV");
+      texto2.textContent = alto;
+    }
+  </script>
+</body>
+</html>

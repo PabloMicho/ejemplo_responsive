@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+@media screen and (max-width: 450px) {
+    html {
+      background-color: skyblue;
+    }
+  }
+  
+  @media screen and (min-width: 450px) and (max-width: 550px) {
+    html {
+      background-color: springgreen;
+    }
+  }
+  
+  @media screen and (min-width: 550px) {
+    html {
+      background-color: gold;
+    }
+  }
